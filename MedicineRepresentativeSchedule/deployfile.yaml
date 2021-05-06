@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: medicinerepresentativeschedule
-          image: mvccube.azurecr.io/schedule:latest
+          image: representativescheduleregistry.azurecr.io/schedule:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -26,7 +26,7 @@ spec:
             - name: ASPNETCORE_URLS
               value: http://+:80
       imagePullSecrets:
-      - name: mvccube
+      - name: webapiservice
 ---
 apiVersion: v1
 kind: Service
